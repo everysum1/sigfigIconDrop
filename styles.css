@@ -1,0 +1,13 @@
+.container {
+  width: 95%;
+  margin: 2%;
+  padding: 1%;
+  font-family: Orbitron; }
+  .container .title {
+    width: 25%;
+    margin: 0 auto; }
+    .container .title h1 {
+      padding-left: 2%;
+      display: inline-block; }
+
+/*# sourceMappingURL=styles.css.map */

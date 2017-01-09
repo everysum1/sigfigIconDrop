@@ -19,3 +19,36 @@ for(let i=0; i < pictures.length; i++) {
   
   picList.appendChild(li);
 };
+
+function dragStart(e){
+  let list = document.querySelectorAll('.pic')
+  let picIndex = Array.prototype.indexOf.call(list, e.target.parentNode)
+  e.dataTransfer.setData('text/plain', picIndex);
+};
+
+function dropped(e) {
+  e.preventDefault();
+  let indexedList = document.querySelectorAll('.pic');
+  let oldIndex = e.dataTransfer.getData('text/plain');
+  let target = e.target.parentNode;
+  let newIndex = Array.prototype.indexOf.call(indexedList, e.target.parentNode)
+  let dropped = indexedList[oldIndex];
+  dropped.remove();
+
+  let list = document.getElementById('pic-list');
+  
+  if (newIndex < oldIndex) {
+    list.insertBefore(dropped, target);
+  } else {
+
+    list.insertBefore(dropped, target.nextSibling);
+  }
+};
+
+function dragEnter(e) {
+  e.preventDefault();
+};
+
+function dragOver(e) {
+  e.preventDefault();
+};

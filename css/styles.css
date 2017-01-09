@@ -1,13 +1,15 @@
-.container {
+#container {
   width: 95%;
   margin: 2%;
   padding: 1%;
   font-family: Orbitron; }
-  .container .title {
-    width: 25%;
-    margin: 0 auto; }
-    .container .title h1 {
-      padding-left: 2%;
-      display: inline-block; }
+  #container .title h1 {
+    padding-left: 1%;
+    display: inline-block; }
+  #container #pic-table {
+    height: 80%; }
+    #container #pic-table .pic {
+      display: inline-block;
+      margin: 1%; }
 
 /*# sourceMappingURL=styles.css.map */

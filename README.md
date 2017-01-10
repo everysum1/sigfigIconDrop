@@ -1,4 +1,4 @@
-# sigfigImageDrop
+# SigFig IconDrop
 
 A draggable sortable gallery of images  **front end dev** and _design-related_...
 

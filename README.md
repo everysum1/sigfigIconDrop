@@ -41,7 +41,7 @@ $ open index.html
 * [VS Code](https://code.visualstudio.com/) -  source code editor
 * [Google Chrome](https://www.google.com/chrome/) - Version 55.0.2883.95 browser & dev tools 
 * [Sass](http://sass-lang.com/) - CSS extension language
-* [JavaScript](http://www.ecma-international.org/ecma-262/6.0/) - JavaScript ES6
+* [JavaScript](http://www.ecma-international.org/ecma-262/6.0/) - scripting language (ES6)
 
 ## Authors
 

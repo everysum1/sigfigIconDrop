@@ -1,6 +1,6 @@
 # SigFig IconDrop
 
-A draggable sortable gallery of beautiful images taken from nature 
+A draggable sortable gallery of beautiful icons featuring images taken from nature 
 
 
 ### *Desktop view*

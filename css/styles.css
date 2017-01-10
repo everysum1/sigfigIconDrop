@@ -10,10 +10,16 @@
     height: 80%;
     border: 1px solid #000;
     padding: 1.5% 0; }
-    #container #pic-table #pic-list .pic {
-      display: inline-block;
-      margin: 1%; }
-      #container #pic-table #pic-list .pic img {
-        border: 1px solid #000; }
+    #container #pic-table #pic-list {
+      padding-left: 0px; }
+      #container #pic-table #pic-list .pic {
+        display: inline-block;
+        margin: 1%; }
+        #container #pic-table #pic-list .pic img {
+          border: 1px solid #000; }
+        #container #pic-table #pic-list .pic .dragStartClass {
+          opacity: 0.4;
+          width: 90%;
+          height: 90%; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -15,23 +15,30 @@ for(let i=0; i < pictures.length; i++) {
   li.setAttribute('ondragenter', 'dragEnter(event)');
   li.setAttribute('ondragstart', 'dragStart(event)');
   li.setAttribute('ondragover', 'dragOver(event)');
+  li.setAttribute('ondragleave', 'dragLeave(event)');
+  li.setAttribute('ondragend', 'dragEnd(event)');
   li.setAttribute('ondrop', 'dropped(event)');
   
   picList.appendChild(li);
 };
 
 function dragStart(e){
+  e.target.classList.add("dragStartClass");
+ 
+
   let list = document.querySelectorAll('.pic')
   let picIndex = Array.prototype.indexOf.call(list, e.target.parentNode)
   e.dataTransfer.setData('text/plain', picIndex);
+ 
 };
 
 function dropped(e) {
   e.preventDefault();
+  
   let indexedList = document.querySelectorAll('.pic');
   let oldIndex = e.dataTransfer.getData('text/plain');
   let target = e.target.parentNode;
-  let newIndex = Array.prototype.indexOf.call(indexedList, e.target.parentNode)
+  let newIndex = Array.prototype.indexOf.call(indexedList, target)
   let dropped = indexedList[oldIndex];
   dropped.remove();
 
@@ -39,16 +46,28 @@ function dropped(e) {
   
   if (newIndex < oldIndex) {
     list.insertBefore(dropped, target);
+    target.childNodes[0].classList.remove("over");
   } else {
-
     list.insertBefore(dropped, target.nextSibling);
+    target.childNodes[0].classList.remove("over");
   }
 };
 
 function dragEnter(e) {
   e.preventDefault();
+  e.target.classList.add("over");
 };
 
 function dragOver(e) {
   e.preventDefault();
+};
+
+function dragLeave(e) {
+  e.preventDefault();
+  e.target.classList.remove("over");
+};
+
+function dragEnd(e) {
+  e.preventDefault();
+  e.target.classList.remove("dragStartClass");
 };
